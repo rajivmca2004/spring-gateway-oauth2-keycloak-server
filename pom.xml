@@ -13,7 +13,7 @@
 	<artifactId>spring-gateway-oauth2-keycloak-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-gateway-oauth2-keycloak-server</name>
-	<description>Demo project for Spring Cloud Gateway with Oauth2 and Keycloak server</description>
+	<description>Demo SSO project for Spring Cloud Gateway with Oauth2 and Keycloak server</description>
 
 	<properties>
 		<java.version>1.8</java.version>
