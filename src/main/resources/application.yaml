@@ -1,27 +1,13 @@
 spring:
   application:
-    name:
-  redis:
-    host: localhost
-    port: 6379    
-  cloud:
-    gateway:
-      routes:
-      - id: catalogues_route
-        uri: http://localhost:8010
-        predicates:
-        - Path=/catalogue
-        - Weight=group1, 6
-        filters:
-        - name: RequestRateLimiter
-          args:
-            redis-rate-limiter.replenishRate: 2
-            redis-rate-limiter.burstCapacity: 4
-      - id: customers_route
-        uri: http://localhost:8011
-        predicates:
-        - Path=/customers
-
+    name: spring-gateway-oauth2-keycloak-server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/master
+server:
+  port : 9021
 #Actuator health check    
 management:
   endpoints:
